@@ -19,7 +19,7 @@ To perform a generation level simulation:
 ```
  cmsRun hlt_cfg.py
 ```
-To perform a reco level simulation (this uses the output of the gen level simulation as imput):
+To perform a reco level simulation (this uses the output of the gen level simulation as input):
 ```
 cmsRun reco_cfg.py
 ```
@@ -43,7 +43,7 @@ E.g:
 
 replace 
 ```
-PYUPDAParameters = cms.vstring("PYUPDAFILE = \'Configuration/Generator/data/Pythia_H0_pyupda.in
+PYUPDAParameters = cms.vstring("PYUPDAFILE = \'Configuration/Generator/data/Pythia_H0_pyupda.in'\")
 ```
 with    
 ```
