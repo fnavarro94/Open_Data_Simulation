@@ -1,0 +1,1 @@
+{"RAWSIMoutput": "minbias.root", "filter": "generator", "GT": "START53_V15A::All"}
