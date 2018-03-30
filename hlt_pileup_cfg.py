@@ -28,7 +28,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(5)
+    input = cms.untracked.int32(100)
 )
 
 # Input source
@@ -64,7 +64,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
 # Additional output definition
 
 # Other statements
-process.mix.input.fileNames = cms.untracked.vstring(['file:minbias.root'])
+process.mix.input.fileNames = cms.untracked.vstring(['root://eospublic.cern.ch//eos/opendata/cms/MonteCarlo2011/Summer11LegDR/MinBias_TuneZ2_7TeV-pythia6/GEN-SIM/START53_LV4-v1/10000/00064CCC-A218-E311-A2E9-D485646A4E1A.root'])
 #process.mix.input.fileNames = cms.untracked.vstring(['root://eospublic.cern.ch//eos/opendata/cms/Run2011A/MinimumBias/AOD/12Oct2013-v1/00000/02054981-A445-E311-B8D5-002590494DE8.root'])
 process.genstepfilter.triggerConditions=cms.vstring("generation_step")
 #from Configuration.AlCa.GlobalTag import GlobalTag
@@ -107,7 +107,7 @@ process.generator = cms.EDFilter("Pythia6GeneratorFilter",
         parameterSets = cms.vstring('pythiaUESettings', 
             'pythiaMyParameters', 
             'PYUPDAParameters'),
-        PYUPDAParameters = cms.vstring("PYUPDAFILE = \'Configuration/Generator/data/Pythia_H0_pyupda.in\'"),
+        PYUPDAParameters = cms.vstring("PYUPDAFILE = \'my_pyupda.in\'"),
         pythiaMyParameters = cms.vstring('MSTJ(22)=1    ! Decay ALL unstable particles', 
             'MSEL=0', 
             'MSUB(152)=1', 
