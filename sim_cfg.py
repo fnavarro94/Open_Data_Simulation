@@ -28,7 +28,7 @@ process.RandomNumberGeneratorService.generator.initialSeed = 10300000
 
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(250)
+    input = cms.untracked.int32(10)
 )
 
 # Input source
@@ -51,7 +51,7 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
     splitLevel = cms.untracked.int32(0),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
     outputCommands = process.RAWSIMEventContent.outputCommands,
-    fileName = cms.untracked.string('simu5.root'),
+    fileName = cms.untracked.string('simu.root'),
     dataset = cms.untracked.PSet(
         filterName = cms.untracked.string(''),
         dataTier = cms.untracked.string('GEN-SIM')
