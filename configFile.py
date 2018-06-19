@@ -118,7 +118,7 @@ process.ALCARECOStreamTkAlMinBias = cms.OutputModule("PoolOutputModule",
 )
 
 # Other statements
-from Configuration.AlCa.GlobalTag import GlobalTag
+#from Configuration.AlCa.GlobalTag import GlobalTag
 #process.GlobalTag = GlobalTag(process.GlobalTag, 'FT_R_53_LV5::All', '')
 process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/FT_53_LV5_AN1_RUNA.db')
 process.GlobalTag.globaltag = 'FT_53_LV5_AN1::All'
